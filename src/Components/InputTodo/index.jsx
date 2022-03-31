@@ -1,19 +1,20 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 /** Slices */
-import { addTodo, updateInput } from "../../features/todosSlice";
+import { addTodo } from "../../redux/todosSlice";
 
 /** Styles */
 import styles from "./style.module.css";
 
 const InputTodo = () => {
-    const input = useSelector((state) => state.todos.input);
+    const [input, setInput] = useState("");
 
     const dispatch = useDispatch();
 
     return (
-        <form className={styles.form_input} onSubmit={(e) => dispatch(addTodo({ input, e }))}>
-            <input className={styles.input_text_todo} type="text" value={input} placeholder="Add Todo..." onChange={(e) => dispatch(updateInput(e.target.value))} />
+        <form className={styles.form_input} onSubmit={(e) => dispatch(addTodo({ input, e }), setInput(""))}>
+            <input className={styles.input_text_todo} type="text" value={input} placeholder="Add Todo..." onChange={(e) => setInput(e.target.value)} />
             <button className={styles.btn_submit_todo} type="submit">Submit</button>
         </form>
     );

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
 /** Slices */
-import { deleteTodo, checkedTodo } from "../../features/todosSlice";
+import { deleteTodo, checkedTodo } from "../../redux/todosSlice";
 
 /** Styles */
 import styles from "./style.module.css";

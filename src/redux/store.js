@@ -3,7 +3,7 @@ import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 /** Slices */
-import todosReducer from "../features/todosSlice";
+import todosReducer from "./todosSlice";
 
 const reducers = combineReducers({
     todos: todosReducer,
