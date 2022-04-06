@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 
 /** Slices */
-import { addTodo } from "../../redux/todosSlice";
+import { addTodo } from "../../store/TodosSlice";
 
 /** Styles */
 import styles from "./style.module.css";
