@@ -7,7 +7,7 @@ import { deleteTodo, checkedTodo } from "../../redux/todosSlice";
 import styles from "./style.module.css";
 
 const TodoList = () => {
-    const todos = useSelector((state) => state.todos.todos);
+    const todos = useSelector((state) => state.todo.todos);
 
     const dispatch = useDispatch();
 

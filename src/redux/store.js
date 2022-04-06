@@ -6,7 +6,7 @@ import storage from "redux-persist/lib/storage";
 import todosReducer from "./todosSlice";
 
 const reducers = combineReducers({
-    todos: todosReducer,
+    todo: todosReducer,
 });
 
 const persistConfig = {
